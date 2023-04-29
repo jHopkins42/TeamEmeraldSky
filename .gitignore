@@ -1,6 +1,9 @@
 # packages
 /node_modules
 
+# processes
+/build
+
 # misc
 .DS_Store
 .env.local
