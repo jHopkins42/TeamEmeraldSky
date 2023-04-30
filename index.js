@@ -16,39 +16,38 @@ const questions = async () => {
   const answers = await inquirer
     .prompt([
       {
-        type: "input",
-        message: "Who are you?  (first and last names only)",
         name: "name",
+        message: "Who are you?  (first and last names only)",
+        type: "input",
       },
       {
-        type: "input",
-        message: "Employee ID number?",
         name: "id",
-      },
-      {
+        message: "Employee ID number?",
         type: "input",
-        message: "What is your email?",
-        name: "email",
       },
       {
-        type: "checkbox",
-        message: "What function do you have?",
+        name: "email",
+        message: "What is your email?",
+        type: "input",
+      },
+      {
         name: "role",
+        message: "What function do you have?",
+        type: "checkbox",
         choices: ["Engineer", "Intern", "Manager"],
       },
     ])
 
 
     
-    //  console.log(answers);
-      // followup questions for Manager function
+    //  console.log the followup questions for Manager function
       if (answers.role === "Manager") {
         const mgrAns = await inquirer
           .prompt([
             {
-              type: "input",
-              message: "What is your office number",
               name: "officeNumber",
+              message: "What is your office number",
+              type: "input",
             },
           ])
           const newMgr = new Manager(
@@ -59,14 +58,14 @@ const questions = async () => {
           );
           newStaffMemberData.push(newMgr);
           
-        // if engineer selected answer these set of questions
+       //follow up questions for engineer role
       } else if (answers.role === "Engineer") {
         const gitHubAns = await inquirer
           .prompt([
             {
-              type: "input",
-              message: "What is your GitHub user name?",
               name: "userName",
+              message: "What is your GitHub user name?",
+              type: "input",
             }
           ])
             const newEngineer = new Engineer(
@@ -77,14 +76,14 @@ const questions = async () => {
             );
             newStaffMemberData.push(newEngineer);
           
-        // if intern selected answer these set of questions
+       // followup questions for intern role
       } else if (answers.role === "Intern") {
         const internAns = await inquirer
           .prompt([
             {
-              type: "input",
-              message: "What university did you attend?",
               name: "school",
+              message: "What university did you attend?",
+              type: "input",
             },
           ])
           
@@ -109,10 +108,10 @@ async function promptQuestions() {
     .prompt([
       {
         name:'addMember',
+        message: "What would you like to do next?",
         type: 'list',
         choices: ['Add a new member', 'Create team'],
-        message: "What would you like to do next?"
-      }
+        }
     ])
 
     if (addMemberAns.addMember === 'Add a new member') {
@@ -123,6 +122,7 @@ async function promptQuestions() {
 
 promptQuestions();
 
+//output function
 function createTeam () {
   console.log("new guy", newStaffMemberData)
   fs.writeFileSync(
@@ -131,3 +131,5 @@ function createTeam () {
     "utf-8"
   );
 }
+
+// yes we have no bananas today.
