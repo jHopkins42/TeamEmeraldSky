@@ -17,17 +17,18 @@ Additional color options
     color: #b8e1dd;
   }
   
-  .team-area {
-    max-width: 1000px;
-    margin: 3em auto;
+  .team-card {
+    max-width: 500px;
+    margin: 5px auto;
     flex-wrap: wrap;
   }
   
   .employee-card {
-    margin: 2px;
-    max-width: 250px;
+    margin: 20px;
+    padding: 5px;
+    max-width: 500px;
     width: 75%;
-    min-height: 300px;
+    min-height: 200px;
     background-color: #044a42;
     color: #b8e1dd;
     display: flex;
@@ -35,6 +36,7 @@ Additional color options
     justify-content: space-between;
     box-shadow: 3px 3px 10px #062906;
     border: none;
+    border-radius: 5%;
   }
   
   .card-body {
@@ -42,6 +44,7 @@ Additional color options
     flex-direction: column;
     justify-content: center;
     background-color: #b6cdbd;
+    border-radius: 10px;
   }
   
   .list-group-item {
