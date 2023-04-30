@@ -1,0 +1,49 @@
+/* Color pallette 
+#f2f9f1
+#ddeedf
+#b6cdbd
+#5c715e
+
+
+Additional color options
+#062925
+#044a42
+#3e9188
+#b8e1dd
+*/
+
+.team-heading {
+    background-color: #044a42;
+    color: #b8e1dd;
+  }
+  
+  .team-area {
+    max-width: 1000px;
+    margin: 3em auto;
+    flex-wrap: wrap;
+  }
+  
+  .employee-card {
+    margin: 2px;
+    max-width: 250px;
+    width: 75%;
+    min-height: 300px;
+    background-color: #044a42;
+    color: #b8e1dd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 3px 3px 10px #062906;
+    border: none;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #b6cdbd;
+  }
+  
+  .list-group-item {
+    color: #5c715e;    
+}
